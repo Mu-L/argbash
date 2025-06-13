@@ -66,7 +66,7 @@ _arg_mode="default"
 print_help()
 {
 	printf '%s\n' "Make a template for scripts."
-	printf 'Usage: %s [-s|--separate] [--(no-)hints] [--pos <arg>] [--opt <arg>] [--opt-bool <arg>] [-m|--mode <MODE>] [-v|--version] [-h|--help] [<output>]\n' "$0"
+	printf 'Usage: %s [-s|--separate] [--(no-)hints] [--pos <arg>] [--opt <arg>] [--opt-bool <arg>] [-m|--mode <MODE>] [-v|--version] [-h|--help] [<output>]\n' "$(basename "$0")"
 	printf '\t%s\n' "<output>: Name of the output template (default: '-')"
 	printf '\t%s\n' "-s, --separate: Separate the parsing logic (specify two times for complete separation)"
 	printf '\t%s\n' "--hints, --no-hints: Whether to write hints to the script template (off by default)"

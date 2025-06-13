@@ -86,7 +86,7 @@ _arg_debug=
 print_help()
 {
 	printf '%s\n' "Argbash is an argument parser generator for Bash."
-	printf 'Usage: %s [-o|--output <arg>] [-i|--(no-)in-place] [-t|--type <type>] [--(no-)library] [--strip <content>] [--(no-)check-typos] [-c|--(no-)commented] [-I|--search <arg>] [--debug <arg>] [-h|--help] [-v|--version] <input>\n' "$0"
+	printf 'Usage: %s [-o|--output <arg>] [-i|--(no-)in-place] [-t|--type <type>] [--(no-)library] [--strip <content>] [--(no-)check-typos] [-c|--(no-)commented] [-I|--search <arg>] [--debug <arg>] [-h|--help] [-v|--version] <input>\n' "$(basename "$0")"
 	printf '\t%s\n' "<input>: The input template file (pass '-' for stdin)"
 	printf '\t%s\n' "-o, --output: Name of the output file (pass '-' for stdout) (default: '-')"
 	printf '\t%s\n' "-i, --in-place, --no-in-place: Update a bash script in-place (off by default)"
