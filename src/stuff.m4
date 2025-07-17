@@ -417,7 +417,7 @@ m4_define([_MAKE_HELP], [MAKE_FUNCTION(
 		[dnl If we have optionals, display them like [--opt1 arg] [--(no-)opt2] ... according to their type. @<:@ becomes square bracket at the end of processing
 ],
 		[_MAKE_HELP_SYNOPSIS([$1])],
-		[\n' "@S|@0"_ENDL_()],
+		[\n' "$(basename "@S|@0")"_ENDL_()],
 		[_IF_HAVE_POSITIONAL_ARGS([_MAKE_HELP_FUNCTION_POSITIONAL_PART])],
 		[dnl If we have 0 optional args, don't do anything (FOR loop would assert, 0 < 1)
 ],

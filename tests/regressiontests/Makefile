@@ -266,6 +266,7 @@ basic: $(TESTDIR)/basic.sh
 	grep -q "local _key$$" $<
 	$< -h | grep -q 'P percent: %'
 	$< -h | grep -q 'O percent: %'
+	$< -h | grep -q 'Usage: $(notdir $<) '
 	! $< -h | grep -qe '\[--\]'
 	test -z "$(SHELLCHECK)" || $(SHELLCHECK) "$(TESTDIR)/basic.sh"
 basic-dash: $(TESTDIR)/basic-dash.sh
@@ -275,6 +276,7 @@ basic-dash: $(TESTDIR)/basic-dash.sh
 	$< LOO -b | grep -q BOOL=off,
 	$< -h | grep -q 'P percent: %'
 	$< -h | grep -q 'O percent: %'
+	$< -h | grep -q 'Usage: $(notdir $<) '
 	$< -h | grep -qe '\[--\]'
 	test -z "$(SHELLCHECK)" || $(SHELLCHECK) "$(TESTDIR)/basic-dash.sh"
 test-void: $(TESTDIR)/test-void.sh
