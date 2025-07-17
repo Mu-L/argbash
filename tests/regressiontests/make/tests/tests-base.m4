@@ -9,6 +9,7 @@ ADD_TEST_BASH([basic], [[
 	grep -q "local _key$$" $<
 	$< -h | grep -q 'P percent: %'
 	$< -h | grep -q 'O percent: %'
+	$< -h | grep -q 'Usage: $(notdir $<) '
 	! $< -h | grep -qe '\[--\]'
 ]])
 
@@ -20,6 +21,7 @@ ADD_TEST_DASH([basic], [[
 	$< LOO -b | grep -q BOOL=off,
 	$< -h | grep -q 'P percent: %'
 	$< -h | grep -q 'O percent: %'
+	$< -h | grep -q 'Usage: $(notdir $<) '
 	$< -h | grep -qe '\[--\]'
 ]])
 
